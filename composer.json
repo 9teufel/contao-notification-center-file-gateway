@@ -1,0 +1,43 @@
+{
+    "name": "9teufel/contao-notification-center-file-gateway",
+    "description": "Local file gateway for Notification Center 2 and Contao 5",
+    "type": "contao-bundle",
+    "license": "MIT",
+    "version": "1.0.0",
+    "require": {
+        "php": "^8.3",
+        "contao/core-bundle": "^5.3.14",
+        "contao/manager-plugin": "^2.0",
+        "terminal42/notification_center": "^2.7.6",
+        "psr/log": "^2.0 || ^3.0",
+        "symfony/config": "^6.4 || ^7.4",
+        "symfony/dependency-injection": "^6.4 || ^7.4",
+        "symfony/http-kernel": "^6.4 || ^7.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.5 || ^11.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "NineTeufel\\NotificationCenterFileGatewayBundle\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "NineTeufel\\NotificationCenterFileGatewayBundle\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "contao-manager-plugin": "NineTeufel\\NotificationCenterFileGatewayBundle\\ContaoManager\\Plugin"
+    },
+    "scripts": {
+        "test": "@php vendor/bin/phpunit"
+    },
+    "config": {
+        "allow-plugins": {
+            "contao/manager-plugin": false,
+            "contao-components/installer": false,
+            "php-http/discovery": false
+        }
+    }
+}
